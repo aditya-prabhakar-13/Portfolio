@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #landing {
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .intro {
+      max-width: 600px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    #projects .project-card {
+      background: #fff;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #contact button {
+      padding: 0.8rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Landing Page -->
+  <section id="landing">
+    <div class="intro">
+      <img src="avatar.jpg" alt="Your Photo" class="avatar" />
+      <h1>Hello, I'm Aditya Prabhakar</h1>
+      <p>Aspiring Web Developer | Tech Enthusiast</p>
+      <a href="#about">About Me ↓</a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a student at IIT Guwahati, passionate about Web Development, Design, and Startups. Skilled in HTML, CSS, JavaScript, Python, C/C++ and Java.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <img src="project1.jpg" alt="Project Screenshot" />
+      <h3>Project Title</h3>
+      <p>Brief description of the project. Technologies used.</p>
+      <a href="#">View Project</a>
+    </div>
+    <!-- Repeat project-card as needed -->
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      const name = event.target.name.value.trim();
+      const email = event.target.email.value.trim();
+      const message = event.target.message.value.trim();
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        event.preventDefault();
+      } else if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+      } else {
+        alert("Message sent successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

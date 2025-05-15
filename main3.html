@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Prabhakar | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Landing Page -->
+  <section id="landing">
+    <div class="intro">
+      <img src="avatar.jpg" alt="Your Photo" class="avatar" />
+      <h1>Hello, I'm Aditya Prabhakar</h1>
+      <p>Aspiring Web Developer | Tech Enthusiast</p>
+      <a href="#about">About Me ↓</a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a student at IIT Guwahati, passionate about Web Development, Design, and Startups. Skilled in HTML, CSS, JavaScript, Python, C/C++ and Java.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <img src="project1.jpg" alt="Project Screenshot" />
+      <h3>Project Title</h3>
+      <p>Brief description of the project. Technologies used.</p>
+      <a href="#">View Project</a>
+    </div>
+    <!-- Repeat project-card as needed -->
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      const name = event.target.name.value.trim();
+      const email = event.target.email.value.trim();
+      const message = event.target.message.value.trim();
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        event.preventDefault();
+      } else if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+      } else {
+        alert("Message sent successfully!");
+      }
+    });
+  </script>
+</body>
+</html>
