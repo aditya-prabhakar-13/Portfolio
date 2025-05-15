@@ -1,4 +1,4 @@
-// Contact form validation
+
 document.getElementById("contactForm").addEventListener("submit", function (event) {
   const name = event.target.name.value.trim();
   const email = event.target.email.value.trim();
