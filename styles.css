@@ -74,6 +74,24 @@ section {
   transform: scale(1.1);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
+.about-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #121212;
+  background-color: #bb94f9;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.about-button:hover {
+  background-color: #a77ef5;
+  transform: translateY(-2px);
+}
 
 h1 {
   font-size: 2.5rem;
