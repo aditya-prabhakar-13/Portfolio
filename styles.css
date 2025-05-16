@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +47,6 @@ section {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  
   background-size: cover;
   background-position: center;
   opacity: 0.1;
@@ -75,24 +73,36 @@ section {
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
-.about-button {
-  display: inline-block;
-  margin-top: 1.5rem;
+.landing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-button {
+  flex: 1 1 auto;
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #121212;
   background-color: #bb94f9;
-  border: none;
   border-radius: 8px;
   text-decoration: none;
+  text-align: center;
+  min-width: 100px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.about-button:hover {
+.landing-button:hover {
   background-color: #a77ef5;
   transform: translateY(-2px);
 }
+
 
 h1 {
   font-size: 2.5rem;
@@ -339,5 +349,9 @@ footer {
 
   .edu-logo {
     margin-bottom: 0.5rem;
+  }
+
+  .landing-button {
+  flex: 1 1 45%;
   }
 }
