@@ -355,3 +355,14 @@ footer {
   flex: 1 1 45%;
   }
 }
+
+::selection {
+  background-color: #bb94f9;  
+  color: #121212;             
+}
+
+
+::-moz-selection {
+  background-color: #bb94f9;
+  color: #121212;
+}
