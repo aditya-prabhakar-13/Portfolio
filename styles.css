@@ -192,6 +192,33 @@ a {
   background-color: #e6e6e6;
 }
 
+.deck-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #121212;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.deck-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.deck-btn:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.03);
+}
 
 .por-image {
   width: 100%;
